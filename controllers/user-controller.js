@@ -1,5 +1,4 @@
-const { User, Thought } = require("../models");
-const { use } = require("../routes");
+const { User } = require("../models");
 
 const userController = {
     getAllUsers(req, res) {
