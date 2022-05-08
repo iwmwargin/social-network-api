@@ -1,10 +1,10 @@
-const { Thought } = require("../models/Thought");
-const User = require("../models/User");
-const { use } = require("../routes");
+const { Thought, User } = require("../models");
 
 const thoughtController = {
     getAllThoughts(req, res) {
         Thought.find({})
+        .select("-__v")
+        .sort({ _id: -1 })
         .then(thoughtData => res.json(thoughtData))
         .catch(err => {
             console.log(err);
@@ -14,6 +14,7 @@ const thoughtController = {
 
     getThoughtsById({ params }, res) {
         Thought.findOne({ _id: params.id })
+        .select("-__v")
         .then(thoughtData => {
             if(!thoughtData) {
                 res.status(404).json({ message: "No thought found with this ID!"});
