@@ -46,7 +46,7 @@
   ## Photos
   _**Image of Insomnia Routes**_:
   <br>
-  <img src="https://github.com/Clos01/Friendless-in-seattle/blob/main/README-images/Login.png">
+  <img src="https://github.com/iwmwargin/social-network-api/blob/main/Insomnia.png">
   <br>
   _**Video Link**_:
   <br>
